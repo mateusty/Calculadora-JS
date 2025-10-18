@@ -7,6 +7,9 @@ window.addEventListener('keydown', function(e) {
     if (!isNaN(tecla) && tecla >= 0 && tecla <= 9) {
         AdicionarNum(tecla)
     }
+    else if (tecla == "Escape") {
+        Limpar()
+    }
 })
 
 function AdicionarNum(num) {
@@ -29,6 +32,7 @@ function Operacao(op) {
     numero_salvo = parseInt(document.getElementById('input').textContent);
     operacao = op;
     segundo_numero = true;
+    document.getElementById('input').textContent = op
 }
 
 function Calcular() {
@@ -37,16 +41,16 @@ function Calcular() {
     const atual = parseInt(input.textContent);
     let resultado = 0;
 
-    if (operacao == "soma") {
+    if (operacao == "+") {
         resultado = numero_salvo + atual;
     }
-    else if (operacao == "sub") {
+    else if (operacao == "-") {
         resultado = numero_salvo - atual;
     }
-    else if (operacao == "div") {
+    else if (operacao == "/") {
         resultado = numero_salvo / atual;
     }
-    else if (operacao == "mult") {
+    else if (operacao == "*") {
         resultado = numero_salvo * atual;
     }
     input.textContent = String(resultado);
