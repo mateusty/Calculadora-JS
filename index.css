@@ -47,8 +47,12 @@ body {
 
 .numeros:hover {
     border: 1px solid black;
-    background-color: #bbc0c4;
+    transform: translateY(-2%);
     font-weight: bold;
     cursor: pointer;
+}
+
+.numeros:active {
+    background-color: #bbc0c4;
 }
 
