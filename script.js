@@ -32,6 +32,9 @@ function AdicionarNum(num) {
 
 function Limpar() {
     document.getElementById('input').textContent = '';
+    numero_salvo = 0;
+    operacao = '';
+    segundo_numero = false;
 }
 
 function Operacao(op) {
