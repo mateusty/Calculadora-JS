@@ -2,6 +2,13 @@ let numero_salvo = parseInt(0);
 let operacao = '';
 let segundo_numero = false;
 
+window.addEventListener('keydown', function(e) {
+    const tecla = e.key;
+    if (!isNaN(tecla) && tecla >= 0 && tecla <= 9) {
+        AdicionarNum(tecla)
+    }
+})
+
 function AdicionarNum(num) {
     const input = document.getElementById('input');
     if (segundo_numero == true) {
