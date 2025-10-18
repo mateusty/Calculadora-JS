@@ -10,6 +10,12 @@ window.addEventListener('keydown', function(e) {
     else if (tecla == "Escape") {
         Limpar()
     }
+    else if (tecla == "+" || tecla == "-" || tecla == "*" || tecla == "/") {
+        Operacao(tecla)
+    }
+    else if (tecla == "Enter") {
+        Calcular()
+    }
 })
 
 function AdicionarNum(num) {
